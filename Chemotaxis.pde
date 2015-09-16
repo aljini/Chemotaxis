@@ -15,9 +15,11 @@ Bacteria[] colony;
  }   
  void draw()   
  {    
- 	
+ 	for (int i =0; i< colony.length; i++)
+ 	{
  	colony[i].show();
  	colony[i].move();
+    }
  }  
  class Bacteria    
  {     
@@ -43,8 +45,8 @@ Bacteria[] colony;
 
  		
 
- 		bacX = bacX +  (int)(Math.random()*30)-15;
- 		bacY = bacY +  (int)(Math.random()*30)-15;
+ 		bacX = bacX +  (int)(Math.random()*21)-10;
+ 		bacY = bacY +  (int)(Math.random()*21)-10;
  	}
  
  	void show (){
