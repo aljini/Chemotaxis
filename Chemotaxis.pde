@@ -5,7 +5,7 @@ Bacteria[] colony;
 	 void setup()   
  {     
  	size(500, 500);
- 	colony = new Bacteria[10];
+ 	colony = new Bacteria[1000];
 	for (int i =0; i< colony.length; i++){
 	colony[i] = new Bacteria(250,250,0,0,0);
 
@@ -15,10 +15,12 @@ Bacteria[] colony;
  }   
  void draw()   
  {    
+ 	background(0, 0, 0);
  	for (int i =0; i< colony.length; i++)
  	{
  	colony[i].show();
  	colony[i].move();
+ 	colony[i].mouseMove();
     }
  }  
  class Bacteria    
@@ -45,8 +47,8 @@ Bacteria[] colony;
 
  		
 
- 		bacX = bacX +  (int)(Math.random()*21)-10;
- 		bacY = bacY +  (int)(Math.random()*21)-10;
+ 		bacX = bacX +  (int)(Math.random()*15)-7;
+ 		bacY = bacY +  (int)(Math.random()*15)-7;
  	}
  
  	void show (){
@@ -55,9 +57,38 @@ Bacteria[] colony;
  		bacClrB = (int)(Math.random()*256);
  		bacClrG = (int)(Math.random()*256);
 
+ 		noStroke();
  		fill(bacClrR,bacClrG,bacClrB);
- 		ellipse(bacX,bacY,10,10);
+        ellipse(bacX,bacY,10,10);
+        fill(255,255,255,20);
+ 		ellipse(bacX,bacY,30,30);
+ 		
+ 		
 
+
+ 	}
+
+ 	void mouseMove() {
+
+ 	 if(mouseX>bacX) 
+ 	 {
+ 	 	bacX = bacX +  (int)(Math.random()*15)-1;
+ 	 }
+
+ 	 if(mouseX<bacX) 
+ 	 {
+ 	 	bacX = bacX +  (int)(Math.random()*15)-14;
+ 	 }
+
+ 	 if(mouseY>bacY) 
+ 	 {
+ 	 	bacY = bacY +  (int)(Math.random()*15)-1;
+ 	 }
+
+ 	 if(mouseY<bacY) 
+ 	 {
+ 	 	bacY = bacY +  (int)(Math.random()*15)-14;
+ 	 }
 
  	}
 
