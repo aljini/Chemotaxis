@@ -1,13 +1,22 @@
 Bacteria[] colony;
-
+Cross circley;
 
 
 	 void setup()   
  {     
  	size(500, 500);
+
+ 	circley = new Cross(250,250);
+
  	colony = new Bacteria[1000];
 	for (int i =0; i< colony.length; i++){
 	colony[i] = new Bacteria(250,250,0,0,0);
+
+
+	
+	
+
+
 
  	
   	}
@@ -16,11 +25,17 @@ Bacteria[] colony;
  void draw()   
  {    
  	background(0, 0, 0);
+
+ 	 circley.show();
+ 	 circley.move();
+
  	for (int i =0; i< colony.length; i++)
  	{
  	colony[i].show();
  	colony[i].move();
  	colony[i].mouseMove();
+
+
     }
  }  
  class Bacteria    
@@ -94,3 +109,26 @@ Bacteria[] colony;
 
 
  }
+
+ class Cross {
+  int myX;
+  int myY;
+
+  Cross(int x, int y) {
+
+    myX =x;
+    myY =y;
+  }
+
+  void move() {
+    myX = mouseX;
+    myY =mouseY;
+  }
+
+  void show () {
+
+  	fill (255);
+  	ellipse(myX,myY,10,10);
+    
+  }
+}
