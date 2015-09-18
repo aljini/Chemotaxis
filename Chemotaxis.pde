@@ -1,23 +1,17 @@
+
 Bacteria[] colony;
 Cross circley;
 
 
 	 void setup()   
  {     
- 	size(500, 500);
+ 	 size(1000, 750);
 
  	circley = new Cross(250,250);
 
  	colony = new Bacteria[1000];
 	for (int i =0; i< colony.length; i++){
 	colony[i] = new Bacteria(250,250,0,0,0);
-
-
-	
-	
-
-
-
  	
   	}
  	
