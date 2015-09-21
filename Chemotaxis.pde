@@ -1,27 +1,28 @@
 
 Bacteria[] colony;
-Cross circley;
 
+PImage photoA;
+PImage photoB;
 
 	 void setup()   
  {     
  	 size(1000, 750);
 
- 	circley = new Cross(250,250);
 
  	colony = new Bacteria[1000];
 	for (int i =0; i< colony.length; i++){
 	colony[i] = new Bacteria(250,250,0,0,0);
- 	
+  photoA = loadImage("yellow-star-th.png");
+ 	photoA.resize(40,40);
+  photoB = loadImage("yellow-star-th.png");
+  photoB.resize(45,45);
   	}
  	
  }   
  void draw()   
  {    
  	background(0, 0, 0);
-
- 	 circley.show();
- 	 circley.move();
+  image(photoA, mouseX-20,mouseY-20);
 
  	for (int i =0; i< colony.length; i++)
  	{
@@ -29,6 +30,9 @@ Cross circley;
  	colony[i].move();
  	colony[i].mouseMove();
 
+ 
+  
+ 
 
     }
  }  
@@ -104,25 +108,4 @@ Cross circley;
 
  }
 
- class Cross {
-  int myX;
-  int myY;
-
-  Cross(int x, int y) {
-
-    myX =x;
-    myY =y;
-  }
-
-  void move() {
-    myX = mouseX;
-    myY =mouseY;
-  }
-
-  void show () {
-
-  	fill (255);
-  	ellipse(myX,myY,10,10);
-    
-  }
-}
+ 
