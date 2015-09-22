@@ -31,14 +31,26 @@ PImage photoB;
   photoA = loadImage("yellow-star-th.png");
  	photoA.resize(40,40);
   photoB = loadImage("yellow-star-th.png");
-  photoB.resize(45,45);
+  photoB.resize(70,70);
+
   	}
  	
  }   
  public void draw()   
  {    
+  
+
  	background(0, 0, 0);
-  image(photoA, mouseX-20,mouseY-20);
+
+  
+
+  image(photoB, mouseX-35,mouseY-35);
+   photoB.filter(BLUR,1);
+  
+  
+ image(photoA, mouseX-20,mouseY-20);
+
+  
 
  	for (int i =0; i< colony.length; i++)
  	{
