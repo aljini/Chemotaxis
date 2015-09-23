@@ -22,7 +22,7 @@ PImage photoB;
 
 	 public void setup()   
  {     
- 	 size(1000, 750);
+ 	 size(851, 588);
 
 
  	colony = new Bacteria[1000];
