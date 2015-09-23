@@ -6,7 +6,7 @@ PImage photoB;
 
 	 void setup()   
  {     
- 	 size(1000, 750);
+ 	 size(851, 588);
 
 
  	colony = new Bacteria[1000];
@@ -24,7 +24,7 @@ PImage photoB;
  {    
   
 
- 	background(0, 0, 0);
+ 	background(2, 13, 32);
 
   
 
