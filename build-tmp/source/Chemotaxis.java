@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Chemotaxis extends PApplet {
+
 
 // @pjs preload must be used to preload the image
 /* @pjs preload="yellow-star-th.png"; */
@@ -6,7 +22,7 @@ Bacteria[] colony;
 PImage photoA;
 PImage photoB;
 
-	 void setup()   
+	 public void setup()   
  {     
  	 size(851, 588);
 
@@ -22,7 +38,7 @@ PImage photoB;
   	}
  	
  }   
- void draw()   
+ public void draw()   
  {    
   
 
@@ -70,7 +86,7 @@ PImage photoB;
 
  	}
 
- 	void move() {
+ 	public void move() {
 
  		
 
@@ -78,7 +94,7 @@ PImage photoB;
  		bacY = bacY +  (int)(Math.random()*15)-7;
  	}
  
- 	void show (){
+ 	public void show (){
 
  		bacClrR = (int)(Math.random()*256);
  		bacClrB = (int)(Math.random()*256);
@@ -95,7 +111,7 @@ PImage photoB;
 
  	}
 
- 	void mouseMove() {
+ 	public void mouseMove() {
 
  	 if(mouseX>bacX) 
  	 {
@@ -123,3 +139,12 @@ PImage photoB;
  }
 
  
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Chemotaxis" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
+}
