@@ -15,12 +15,11 @@ import java.io.IOException;
 public class Chemotaxis extends PApplet {
 
 
-// @pjs preload must be used to preload the image
-/* @pjs preload="yellow-star-th.png"; */
+
 Bacteria[] colony;
 
 PImage photoA;
-PImage photoB;
+
 
 	 public void setup()   
  {     
@@ -32,8 +31,7 @@ PImage photoB;
 	colony[i] = new Bacteria(250,250,0,0,0);
   photoA = loadImage("yellow-star-th.png");
  	photoA.resize(40,40);
-  photoB = loadImage("yellow-star-th.png");
-  photoB.resize(70,70);
+  
 
   	}
  	
@@ -44,11 +42,7 @@ PImage photoB;
 
  	background(2, 13, 32);
 
-  
 
-  image(photoB, mouseX-35,mouseY-35);
-   photoB.filter(BLUR,1);
-  
   
  image(photoA, mouseX-20,mouseY-20);
 
@@ -59,10 +53,6 @@ PImage photoB;
  	colony[i].show();
  	colony[i].move();
  	colony[i].mouseMove();
-
- 
-  
- 
 
     }
  }  
