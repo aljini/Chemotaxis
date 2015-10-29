@@ -13,8 +13,8 @@ PImage photoA;
  	colony = new Bacteria[1000];
 	for (int i =0; i< colony.length; i++){
 	colony[i] = new Bacteria(250,250,0,0,0);
-  photoA = loadImage("yellow-star-th.png");
- 	photoA.resize(40,40);
+  photoA = loadImage("1yellow-star-th.png");
+
   
 
   	}
@@ -28,7 +28,7 @@ PImage photoA;
 
 
   
- image(photoA, mouseX-20,mouseY-20);
+ image(photoA, mouseX-50,mouseY-50);
 
   
 
